@@ -8,6 +8,12 @@ An addon for Garry's Mod that tweaks the default HL2 RPG launcher. Among other t
 -   Enable/disable rocket guidance
 -   RPG rapid fire, multiple active missiles
 
+## Demo
+
+https://github.com/user-attachments/assets/6938c661-bf62-453f-ba4a-a7d895249a20
+
+Map: `gm_goldencity_v2_day`
+
 ## Server settings
 
 | ConVar                      | Default | Description                                                           |

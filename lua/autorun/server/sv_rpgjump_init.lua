@@ -54,17 +54,17 @@ hook.Add("OnEntityCreated", "RPGJumpRapidRPGFire", function(ent)
 			ent:CollisionRulesChanged()
 		end
 
+		if GetConVar("rpgjump_infinite_ammo"):GetBool() then
+			ply:SetAmmo(ply:GetAmmoCount("rpg_round") + 1, "rpg_round")
+		end
+
 		if GetConVar("rpgjump_rapid_fire"):GetBool() then
 			local ammo = ply:GetAmmoCount("rpg_round")
 			ply:SetActiveWeapon(NULL)
 			ply:StripWeapon("weapon_rpg")
 			ply:SetSuppressPickupNotices(true)
 			local weapon = ply:Give("weapon_rpg", true)
-
-			if GetConVar("rpgjump_infinite_ammo"):GetBool() then
-				ply:SetAmmo(ammo + 1, "rpg_round")
-			end
-
+			ply:SetAmmo(ammo, "rpg_round")
 			ply:SetSuppressPickupNotices(false)
 			ply:SetActiveWeapon(weapon)
 		end
